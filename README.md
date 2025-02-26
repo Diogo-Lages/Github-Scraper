@@ -42,11 +42,11 @@ To use the GitHub Scraper, ensure you have the following installed:
 3. **Run the Scraper**:
    - For CLI mode:
      ```bash
-     python cli_scraper.py
+     python github_scraper_cli.py
      ```
    - For GUI mode:
      ```bash
-     python gui_scraper.py
+     python github_scraper_gui.py
      ```
 
 ---
@@ -55,7 +55,7 @@ To use the GitHub Scraper, ensure you have the following installed:
 ### **CLI Mode**
 1. Run the CLI script:
    ```bash
-   python cli_scraper.py
+   python github_scraper_cli.py
    ```
 2. Follow the prompts to select a programming language, filter by tools/technologies, specify star ranges, and set date filters.
 3. View the results directly in the terminal.
@@ -63,7 +63,7 @@ To use the GitHub Scraper, ensure you have the following installed:
 ### **GUI Mode**
 1. Run the GUI script:
    ```bash
-   python gui_scraper.py
+   python github_scraper_gui.py
    ```
 2. Use the dropdown menus and checkboxes to configure your search criteria:
    - Select programming languages.
