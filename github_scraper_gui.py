@@ -9,7 +9,7 @@ from retrying import retry
 from threading import Thread
 from colorama import Fore, Style, init
 
-# Initialize colorama
+
 init(autoreset=True)
 
 GITHUB_API_URL = "https://api.github.com"
@@ -54,7 +54,6 @@ def search_repositories(query, per_page=100, page=1):
 
 
 def get_latest_commit_date(owner, repo):
-    """Fetch the latest commit date for a repository."""
     url = f"{GITHUB_API_URL}/repos/{owner}/{repo}/commits"
     commits = make_api_request(url, params={'per_page': 1})  # Fetch only the latest commit
     if commits:
@@ -63,7 +62,6 @@ def get_latest_commit_date(owner, repo):
 
 
 def is_within_date_range(date_str, years=None, months=None):
-    """Check if the given date is within the specified time range."""
     commit_date = datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%SZ")
     current_date = datetime.now(timezone.utc)  # Use timezone-aware datetime (compatible with Python < 3.11)
 
@@ -225,7 +223,6 @@ class GitHubScraperApp:
         self.log_text.see(tk.END)
 
     def add_selected_language(self):
-        """Add the selected language from the Combobox to the Listbox."""
         selected_lang = self.selected_language.get()
         if selected_lang and selected_lang != "Select a Language":
             if selected_lang not in self.selected_languages_listbox.get(0, tk.END):
@@ -237,7 +234,6 @@ class GitHubScraperApp:
             self.log_message("Please select a valid language.", "red")
 
     def delete_selected_language(self):
-        """Delete the selected language(s) from the Listbox."""
         selected_indices = self.selected_languages_listbox.curselection()
         if not selected_indices:
             self.log_message("No language selected for deletion.", "red")
