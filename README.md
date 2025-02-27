@@ -33,7 +33,7 @@ To use the GitHub Scraper, ensure you have the following installed:
 ## **Installation**
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/github-scraper.git
+   git clone https://github.com/Diogo-Lages/github-scraper.git
    cd github-scraper
    ```
 2. **Set Up Your GitHub Token**:
